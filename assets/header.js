@@ -35,3 +35,58 @@ window.addEventListener('load', function() {
     body.classList.add('loaded');
   });
   
+
+// menambahkan animasi ketika menscroll bagian bawah pada website
+    window.addEventListener('scroll', function() {
+        var section = document.querySelector('.animated');
+        var sectionPosition = section.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight;
+
+        if (sectionPosition < screenPosition) {
+            section.classList.add('fadeInUp');
+        }
+    });
+
+    window.addEventListener('scroll', function() {
+        var lastSection = document.getElementById('last-section');
+        var lastSectionPosition = lastSection.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight;
+
+        if (lastSectionPosition < screenPosition) {
+            lastSection.classList.add('fadeInUp');
+        }
+    });
+
+
+    //animasi kesamping pada sectionn
+    window.addEventListener('scroll', function() {
+        var elements = document.querySelectorAll('.animasitwo');
+        var screenPosition = window.innerHeight;
+
+        elements.forEach(function(element) {
+            var elementPosition = element.getBoundingClientRect().top;
+            if (elementPosition < screenPosition) {
+                element.classList.add('slideInRight');
+            }
+        });
+    });
+
+
+
+
+
+
+    /*
+    <script>
+    window.addEventListener('scroll', function() {
+        var lastSection = document.getElementById('last-section');
+        var lastSectionPosition = lastSection.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight;
+
+        if (lastSectionPosition < screenPosition) {
+            lastSection.classList.add('fadeInUp');
+        }
+    });
+</script>
+
+    */

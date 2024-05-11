@@ -203,3 +203,41 @@ figcaption {
   font-size: 14px;
 }
 /* end isi konten css */
+
+/*animasi ketika menscroll bagian bawah website*/
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animated {
+  opacity: 0;
+}
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/*animasi ketika animasi kesamping pada section*/
+@keyframes slideInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.animasitwo {
+  opacity: 0;
+}
+.slideInRight {
+  animation: slideInRight 1s ease forwards;
+}
