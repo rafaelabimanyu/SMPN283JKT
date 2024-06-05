@@ -1,75 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMPN283 JKT</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-sG4f6Y74L4glnM3p6flRDrX2/gOkiT5UmEAB+1EvOclFz0sU3QgJLSM6KtFnDXLMj1a3w+R1wZf8UWbX2N3Wkg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="src/style.css">
 </head>
-
 <body>
+  <div class="prompt-container">
+    <div class="prompt">
+      <h2>Selamat datang di website kami!</h2>
+      <p>sebelum menjelajahi website ini kalian harus mengisi username , berikan username yang benar maka akan ke laman selanjutnya jika tidak maka akan 404</p>
 
-<!-- first header -->
-    <header>
-        <nav class="navbar">
-            <div class="logo_header">
-                <a href="#" class="logo">SMPN283</a>
-                <button class="navbar_toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            <ul class="main_nav">
-                <li><a href="assets/aboutUS.html">AboutUS</a></li>
-                <li><a href="assets/Courses.html">Courses</a></li>
-                <li><a href="assets/staff.html">Staff</a></li>
-                <li><a href="assets/facilities.html">Facilities</a></li>
-                <li><a href="assets/extracurricular.html">Extracurricular</a></li>
-                <li><a href="assets/Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-<!-- end header -->
+      <p>Masukkan nama pengguna Anda:</p>
+      <input type="text" id="username">
+      <button class="button" onclick="submitUsername()">Submit</button>
+      <button><a href="halaman-selanjutnya.html" style="text-decoration: none;">klik selanjutnya</a></button>
+    </div>
+  </div>
 
-
-<!-- first isi konten -->
-    <section id="about">
-        <h1>WEBSITE SMPN283 JAKARTA</h1>
-        <h3>HALO SELAMAT DATANG DIWEBSITE</h3>
-        <h3>SEKOLAH SMPN283 JAKARTA</h3>
-        <p>INI BUKANLAH WEBSITE RESMI SMPN283.</p>
-        <p>MELAINKAN WEBSITEINI ADALAH KARYA</p>
-        <P>PESERTA DIDIK SMPN283 JAKARTA,</P>
-        <p>BERNAMA RAFAEL ABIMANYU KELAS IXE.</p>
-        <p>SEKALIGUS PEMBUAT WEBSITE YANG SEDANG ANDA BACA</p>
-        <p>sedikit cerita sbelum kalian melanjutkan</p>
-        <p>penjelajahan di web ini, saya adalah seorang programer pemula yang baru mengenal dunia coding, saya belajar coding/pemrograman secara
-            otodidak dengan bantuan seperti youtube, buku, blog/situs, dan juga bergabung dikomunitas. saya memiliki ketertarikan dengan dunia pemrograman/coding
-            sejak kelas 1SMP. dan bersungguh sungguh belajar pada kelas 2SMP. langsung saja jelajahi website ini </p>
-    </section>
-    <section id="about">
-        <h1>INI ADALAH RANGKUMAN TENTANG SEKOLAH SMPN 283 JAKARTA</h1>
-        <p>SMPN 283 didirikan pada tahun 2002-5-28.</p>
-        <p>Di jl. Bambu Hitam No.001, RT.4/RW.1, Bambu Apus, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13890</p>
-        <p>kepala sekolah di smpn 238 di pegang oleh Ibu Dr.Lina Purnama Asih. info lebih lengkap kalian bisa menjelajahi diweb ini</p>
-    </section>
-<!-- end isi konten -->
-
-
-<!--first footer-->
-    <footer>
-        <div class="social-media-icons">
-            <a href="https://www.instagram.com/r.abimanyyy?igsh=ZDM2cnN1c3Jja2Nh"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://youtube.com/@abimanyucode?si=vh5aZrjPq3AjcWOm"><i class="fab fa-youtube-square"></i></a>
-            <a href="https://www.tiktok.com/@code.abimanyu?_t=8lKRWaPAxSU&_r=1"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/6281292059125"><i class="fab fa-whatsapp-square"></i></a>
-        </div>
-        <p class="footer-caption">Created by [ R.ABIMANYU ]</p>
-    </footer>
-<!--end footer-->
-
-<!-- sambungkan file html ke javaScript -->
-    <script src="assets/script.js"></script>
+  <script>
+    function submitUsername() {
+      var username = document.getElementById('username').value;
+      if (username.trim() !== '') {
+        alert('Halo, ' + username + '! Selamat datang di website kami! Selamat kamu adalah pengguna pertama yang memasuki website ini');
+      } else {
+        alert('Silakan masukkan nama pengguna Anda!');
+      }
+      // Redirect to main page or perform other actions with the username
+    }
+  </script>
 </body>
 </html>
