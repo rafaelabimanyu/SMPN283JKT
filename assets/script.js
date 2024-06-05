@@ -62,6 +62,7 @@ window.addEventListener('load', function() {
     window.addEventListener('scroll', function() {
         var elements = document.querySelectorAll('.animasitwo');
         var screenPosition = window.innerHeight;
+
         elements.forEach(function(element) {
             var elementPosition = element.getBoundingClientRect().top;
             if (elementPosition < screenPosition) {
